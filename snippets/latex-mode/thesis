@@ -1,0 +1,73 @@
+# -*- mode: snippet -*-
+#name : SWFU thesis template
+# --
+\documentclass{swfuthesis}
+
+\addbibresource{thesis.bib}    % 参照教程自己去写一个.bib文件
+
+\title{${1:论文标题}}
+\enTitle{${2:英文标题}}
+\author{${3:作者姓名}}
+\enAuthor{${4:英文姓名}}
+\Advisor{${5:指导教师姓名}}
+\AdvisorTitle{${6:指导教师职称}}
+\Month{${7:六}}
+\Year{${8:二〇一九}}
+\Subject{${9:计算机科学与技术专业}}    %专业名称（比如 电子信息工程专业）
+
+\begin{document}
+
+\maketitle
+
+\begin{abstract} % 摘要
+$0 本文是关于……
+\end{abstract}
+
+\begin{keyword} % 关键词
+  关键词，关键词，关键词……
+\end{keyword}
+
+\begin{EAbstract} % 英文摘要
+   This project is about...
+\end{EAbstract}
+
+\begin{EKeyword} % 英文关键词
+   keyword, keyword, keyword...
+\end{EKeyword}
+
+\tableofcontents     % 目录
+\listoffigures       % 插图目录，可以没有
+\listoftables        % 表格目录，可以没有
+\cleardoublepage % keep this line
+\pagenumbering{arabic}
+
+% 参考教程，在chapters目录中单独写各章（ch1.tex, ch2.tex...）
+\include{chapters/ch1}
+\include{chapters/ch2}
+\include{chapters/ch3}
+\include{chapters/ch4}
+
+%%%%% appendix （参考文献、指导教师简介、鸣谢、附录）
+\appendix % keep this line
+\makebib % 参考文献
+
+\begin{advisorInfo} % 指导教师简介
+王晓林，男，50岁，硕士，讲师，毕业于英国格林尼治大学，分布式计算系统专业。现任
+西南林业大学计信学院教师。执教Linux、操作系统、网络技术等方面的课程，有丰富的Linux教学和系统管理经验。
+\end{advisorInfo}
+
+\begin{acknowledgment} % 致谢
+我要感谢党，我要感谢政府，我情绪稳定……
+\end{acknowledgment}
+
+%%%%% 附录章节
+\singlespacing
+\include{chapters/ch5}
+
+
+\end{document} % 结束。不要动下面几行！
+
+%%% Local Variables:
+%%% mode: latex
+%%% TeX-master: t
+%%% End:
