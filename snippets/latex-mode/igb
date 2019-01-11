@@ -1,8 +1,0 @@
-# -*- mode: snippet -*-
-#name : \includegraphics for beamer
-# --
-\begin{center}
-  \mode<beamer>{ \includegraphics[width=$2\textwidth]{$1} }%
-  \mode<article>{ \includegraphics[width=$3\textwidth]{$1} }
-\end{center}
-$0

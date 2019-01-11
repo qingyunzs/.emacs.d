@@ -2,17 +2,6 @@
 ;; From: https://segmentfault.com/a/1190000008313904
 ;; @Author: Zhao Rengui
 ;; @Date: 201808
-(org-babel-do-load-languages
-  'org-babel-load-languages
-  '( (scheme . t)
-    (latex . t)
-    (css . t)
-    (ruby . t)
-    (sh . t)
-    (python . t)
-    (emacs-lisp . t)
-    (matlab . t)
-    (C . t)))
 (setq org-confirm-babel-evaluate nil)
 (setq org-src-fontify-natively t)
 ;; (setq org-export-with-sub-superscripts nil)
@@ -40,19 +29,19 @@
 	 :recursive t
 	 :publishing-function org-publish-attachment)
 	("org-static-js-zhaorengui"
-	 :base-directory "~/zhaorengui/github.io/_orgs/_assets/"
+	 :base-directory "~/zhaorengui.github.io/_orgs/_assets/"
 	 :base-extension "js"
 	 :publishing-directory "~/zhaorengui.github.io/assets/js/"
 	 :recursive t
 	 :publishing-function org-publish-attachment)
 	("org-static-css-zhaorengui"
-	 :base-directory "~/zhaorengui/github.io/_orgs/_assets/"
+	 :base-directory "~/zhaorengui.github.io/_orgs/_assets/"
 	 :base-extension "css"
 	 :publishing-directory "~/zhaorengui.github.io/assets/css/"
 	 :recursive t
 	 :publishing-function org-publish-attachment)
 	("org-static-other-zhaorengui"
-	 :base-directory "~/zhaorengui/github.io/_orgs/_assets/"
+	 :base-directory "~/zhaorengui.github.io/_orgs/_assets/"
 	 :base-extension "pdf\\|mp3\\|ogg\\|swf\\|php"
 	 :publishing-directory "~/zhaorengui.github.io/assets/other/"
 	 :recursive t
@@ -78,7 +67,7 @@
 #+AUTHOR:    zrg
 #+EMAIL:     zrg1390556487@gmail.com
 #+LANGUAGE:  cn
-#+OPTIONS:   H:3 num:t toc:nil \n:nil @:t ::t |:t ^:nil -:t f:t *:t <:t
+#+OPTIONS:   H:3 num:nil toc:nil \\n:nil @:t ::t |:t ^:nil -:t f:t *:t <:t
 #+OPTIONS:   TeX:t LaTeX:t skip:nil d:nil todo:t pri:nil tags:not-in-toc
 #+INFOJS_OPT: view:plain toc:t ltoc:t mouse:underline buttons:0 path:http://cs3.swfc.edu.cn/~20121156044/.org-info.js />
 #+HTML_HEAD: <link rel=\"stylesheet\" type=\"text/css\" href=\"http://cs3.swfu.edu.cn/~20121156044/.org-manual.css\" />
@@ -117,7 +106,7 @@ tags:
   (replace-regexp-in-string
     " " "-" (downcase
 	      (replace-regexp-in-string
-		"[^A-Za-z0-9 ]" "" s))))
+		"[^A-Za-z0-9\u4e00-\u9fa5]" "" s))))
 (defun jekyll-yaml-escape (s)
   "Escape a string for YAML."
   (if (or (string-match ":" s)

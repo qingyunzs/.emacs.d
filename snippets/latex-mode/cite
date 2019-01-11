@@ -1,4 +1,0 @@
-# -*- mode: snippet -*-
-#name : cite a section
-# --
-\emph{$1} \cite[${2:Sec.~}]{$0}
