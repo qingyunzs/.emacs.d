@@ -22,16 +22,29 @@
 ;; Load language
 (org-babel-do-load-languages
   'org-babel-load-languages
-  '( (scheme . t)
-    (latex . t)
+  '( (C . t)
     (css . t)
-    (ruby . t)
-    (sh . t)
-    (python . t)
+    (ditaa . t)
+    (calc . t)
     (emacs-lisp . t)
+    (dot . t)
+    (java . t)
+    (js . t)
+    (latex . t)
+    (lisp . t)
     (matlab . t)
+    (org . t)
+    (perl . t)
     (plantuml . t)
-    (C . t)))
+    (python . t)
+    (ruby . t)
+    (sass . t)
+    (scheme . t)
+    (sh . t)
+    (shell . t)
+    (sql . t)
+    (sqlite . t)
+    ))
 ;; Load ~/.emacs.d/lisp
 (add-to-list 'load-path "~/.emacs.d/lisp")
 (require 'init-org-jekyll)
@@ -47,7 +60,9 @@
  ;; If you edit it by hand, you could mess it up, so be careful.
  ;; Your init file should contain only one such instance.
  ;; If there is more than one, they won't work right.
- '(package-selected-packages (quote (plantuml-mode htmlize org)))
+ '(package-selected-packages
+   (quote
+    (smex web-mode company-c-headers company-go company-shell company-php plantuml-mode htmlize org)))
  '(plantuml-jar-path "/home/zrg/.emacs.d/plantuml/plantuml.jar"))
 (custom-set-faces
  ;; custom-set-faces was added by Custom.
