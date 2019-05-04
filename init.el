@@ -70,8 +70,8 @@
 (setq emmet-self-closing-tag-style " /") ;; default "/"
 ;; only " /", "/" and "" are valid.
 ;; eg. <meta />, <meta/>, <meta>
-(server-start)
-(setq server-socket-dir "~/.emacs.d/server")
+;;(server-start)
+;;(setq server-socket-dir "~/.emacs.d/server")
 ;;
 (custom-set-variables
  ;; custom-set-variables was added by Custom.
