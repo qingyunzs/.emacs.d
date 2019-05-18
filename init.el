@@ -58,6 +58,7 @@
 (add-hook 'css-mode-hook  'emmet-mode) ;; enable Emmet's css abbreviation.
 ;; By default, inserted markup will be indented with indent-region, according to the buffer's mode. To disable this, do:
 (add-hook 'emmet-mode-hook (lambda () (setq emmet-indent-after-insert nil)))
+(add-hook 'org-mode-hook (lambda () (setq truncate-lines nil)))
 ;; If you disable indent-region, you can set the default indent level thusly:
 ;;(add-hook 'emmet-mode-hook (lambda () (setq emmet-indentation 2))) ;; indent 2 spaces.
 ;; If you want the cursor to be positioned between first empty quotes after expanding:
