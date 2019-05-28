@@ -78,13 +78,14 @@
  ;; If you edit it by hand, you could mess it up, so be careful.
  ;; Your init file should contain only one such instance.
  ;; If there is more than one, they won't work right.
+ '(custom-enabled-themes (quote (monokai-pro)))
  '(custom-safe-themes
    (quote
     ("1d2f406a342499f0098f9388b87d05ec9b28ccb12ca548f4f5fa80ae368235b6" default)))
  '(package-selected-packages
    (quote
-    (monokai-pro-theme org-plus-contrib emmet-mode smex web-mode company-c-headers company-go company-shell company-php plantuml-mode htmlize org)))
- '(plantuml-jar-path "/home/zrg/.emacs.d/plantuml/plantuml.jar"))
+    (plantuml-mode monokai-pro-theme org-plus-contrib emmet-mode smex web-mode company-c-headers company-go company-shell company-php htmlize org)))
+ '(plantuml-jar-path "~/.emacs.d/plantuml/plantuml.jar"))
 (custom-set-faces
  ;; custom-set-faces was added by Custom.
  ;; If you edit it by hand, you could mess it up, so be careful.
