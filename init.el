@@ -10,7 +10,7 @@
 ;;      https://github.com/jwiegley/use-package
 
 ;;; Code:
-
+(setq debug-on-error t)
 (require 'package)
 (setq package-enable-at-startup nil)
 (setq package-archives

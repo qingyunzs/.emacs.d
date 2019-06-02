@@ -99,8 +99,7 @@ tags:
 感谢您阅读此文，如果您发现任何错误，请发邮件至 zrg1390556487@gmail.com，谢谢！
 # (setq org-export-html-style nil)"
 
-"Default template for Jekyll posts. %s will be replace by the post title."
-  )
+"Default template for Jekyll posts. %s will be replace by the post title.")
 (defun jekyll-make-slug (s)
   "Turn a string into a slug."
   (replace-regexp-in-string
