@@ -10,7 +10,7 @@
 ;;      https://github.com/jwiegley/use-package
 
 ;;; Code:
-(setq debug-on-error t)
+;;(setq debug-on-error t)
 (require 'package)
 (setq package-enable-at-startup nil)
 (setq package-archives
@@ -84,7 +84,7 @@
     ("3a2803566972e3f3882af48ce5680b824e81bf9dc5f32639b5f1e6d9f6aeda3c" "1d2f406a342499f0098f9388b87d05ec9b28ccb12ca548f4f5fa80ae368235b6" default)))
  '(package-selected-packages
    (quote
-    (org plantuml-mode monokai-pro-theme org-plus-contrib emmet-mode smex web-mode company-c-headers company-go company-shell company-php htmlize)))
+    (highlight-indentation org-table-comment org plantuml-mode monokai-pro-theme org-plus-contrib emmet-mode smex web-mode company-c-headers company-go company-shell company-php htmlize)))
  '(plantuml-jar-path "~/.emacs.d/plantuml/plantuml.jar"))
 (custom-set-faces
  ;; custom-set-faces was added by Custom.

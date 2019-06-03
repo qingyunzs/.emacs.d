@@ -7,9 +7,11 @@
 ;; (setq org-export-with-sub-superscripts nil)
 (setq org-publish-project-alist
       '(
-	("org-jekyll-zhaorengui" ;; settings for cute-jumper.github.io
+	("org-jekyll-zhaorengui" 
+	 ;; Path to org files.
 	 :base-directory "~/zhaorengui.github.io/_orgs/"
 	 :base-extension "org"
+	 ;; Path to Jekyll Posts
 	 :publishing-directory "~/zhaorengui.github.io/"
 	 :recursive t
 	 :publishing-function org-html-publish-to-html
@@ -20,7 +22,7 @@
 	 :table-of-contents nil
 	 :html-extension "html"
 	 :section-numbers nil
-	 :html_head "<link rel=\"stylesheet\" type=\"text/css\" href=\"../assets/themes/havee/css/style.css\" />"
+	 ;;:html_head "<link rel=\"stylesheet\" type=\"text/css\" href=\"../assets/themes/havee/css/style.css\" />"
 	 :body-only t)
 	("org-static-images-zhaorengui"
 	 :base-directory "~/zhaorengui.github.io/_orgs/_assets/"
