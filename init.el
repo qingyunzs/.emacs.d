@@ -45,16 +45,13 @@
     (sqlite . t)
     ))
 ;; Load ~/.emacs.d/lisp
-(add-to-list 'load-path "~/.emacs.d/lisp")
+(add-to-list 'load-path "~/.emacs.d/lisp/")
 (require 'init-org-jekyll)
 (require 'emmet-mode)
 (require 'wheatgrass-theme)
-(require 'org-tempo)
 ;; Load plantuml
 (setq org-plantuml-jar-path
       (expand-file-name "~/.emacs.d/plantuml/plantuml.jar"))
-;; company mode
-(global-company-mode t)
 ;; Show line numbers
 ;;(global-linum-mode t);
 ;;(setq linum-format "%d ")
