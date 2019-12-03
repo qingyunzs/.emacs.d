@@ -1,4 +1,4 @@
-;;init.el --- init
+;;init.el --- init
 ;;; Commentary:
 ;; Calls my Emacs configuration files after installing use-package, which is
 ;; necessary for operation.  See also:
@@ -52,9 +52,15 @@
 ;; Load plantuml
 (setq org-plantuml-jar-path
       (expand-file-name "~/.emacs.d/plantuml/plantuml.jar"))
-;; Show line numbers
+;; Show line number
 ;;(global-linum-mode t);
 ;;(setq linum-format "%d ")
+;; Close tool bar
+;;(tool-bar-mode -1)
+;; Close scroll bar
+(scroll-all-mode t)
+;; Close start page
+(setq inhibit-splash-screen t)
 ;; Emmet optional settings
 ;; You probably want to add it to auto-load on your sgml modes:
 (add-hook 'sgml-mode-hook 'emmet-mode) ;; Auto-start on any markup modes
@@ -92,7 +98,7 @@
     ("3a2803566972e3f3882af48ce5680b824e81bf9dc5f32639b5f1e6d9f6aeda3c" "1d2f406a342499f0098f9388b87d05ec9b28ccb12ca548f4f5fa80ae368235b6" default)))
  '(package-selected-packages
    (quote
-    (org-drill-table markdownfmt markdown-mode+ orgalist org-mind-map markdown-mode highlight-indentation org plantuml-mode monokai-pro-theme org-plus-contrib emmet-mode smex web-mode company-c-headers company-go company-shell company-php htmlize)))
+    (company org-drill-table markdownfmt markdown-mode+ orgalist org-mind-map markdown-mode highlight-indentation org plantuml-mode monokai-pro-theme org-plus-contrib emmet-mode smex web-mode company-c-headers company-go company-shell company-php htmlize)))
  '(plantuml-jar-path "~/.emacs.d/plantuml/plantuml.jar"))
 (custom-set-faces
  ;; custom-set-faces was added by Custom.
@@ -100,3 +106,5 @@
  ;; Your init file should contain only one such instance.
  ;; If there is more than one, they won't work right.
  )
+;; auto complete
+(global-company-mode t)
