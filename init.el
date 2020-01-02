@@ -57,7 +57,7 @@
 ;;(global-linum-mode t);
 ;;(setq linum-format "%d ")
 ;; Close tool bar
-;;(tool-bar-mode -1)
+(tool-bar-mode -1)
 ;; Close scroll bar
 (scroll-all-mode t)
 ;; Close start page
