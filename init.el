@@ -18,8 +18,11 @@
 	      '(("melpa" . "http://melpa.org/packages/")
 		("gnu" . "http://elpa.gnu.org/packages/")
 		("org" . "http://orgmode.org/elpa/"))))
-(package-initialize)
+;;
 ;; Load language
+(package-initialize)
+;;
+;; Load languages
 (org-babel-do-load-languages
   'org-babel-load-languages
   '( (C . t)
@@ -44,24 +47,48 @@
     (sql . t)
     (sqlite . t)
     ))
+;;
 ;; Load ~/.emacs.d/lisp
 (add-to-list 'load-path "~/.emacs.d/lisp/")
+;;
+;; Load init-org-jekyll.el
 (require 'init-org-jekyll)
-(require 'emmet-mode)
-(require 'wheatgrass-theme)
-(require 'htmlize)
+;;
+;; Load auto-install-packages.el
+(require 'auto-install-packages)
+;;
 ;; Load plantuml
 (setq org-plantuml-jar-path
       (expand-file-name "~/.emacs.d/plantuml/plantuml.jar"))
+;;;;;;;;;;;;;;;;;;;;;;;;;;
+;;			;;
+;; Customize settings 	;;
+;;			;;
+;;;;;;;;;;;;;;;;;;;;;;;;;;
 ;; Show line number
 ;;(global-linum-mode t);
+;;
+;; Set line format
 ;;(setq linum-format "%d ")
+;; 
+;; Highlight line
+(global-hl-line-mode 1)
+;;
+;; Auto complete
+(global-company-mode t)
+;;
 ;; Close tool bar
 (tool-bar-mode -1)
+;;
+;; Set font
+(set-default-font "Monaco-16")
+;;
 ;; Close scroll bar
 (scroll-all-mode t)
+;;
 ;; Close start page
 (setq inhibit-splash-screen t)
+;;
 ;; Emmet optional settings
 ;; You probably want to add it to auto-load on your sgml modes:
 (add-hook 'sgml-mode-hook 'emmet-mode) ;; Auto-start on any markup modes
@@ -93,13 +120,13 @@
    ["#2d2a2e" "#ff6188" "#a9dc76" "#ffd866" "#78dce8" "#ab9df2" "#ff6188" "#fcfcfa"])
  '(ansi-term-color-vector
    [unspecified "#2d2a2e" "#ff6188" "#a9dc76" "#ffd866" "#78dce8" "#ab9df2" "#ff6188" "#fcfcfa"])
- '(custom-enabled-themes (quote (wheatgrass)))
+ '(custom-enabled-themes (quote (monokai)))
  '(custom-safe-themes
    (quote
-    ("3a2803566972e3f3882af48ce5680b824e81bf9dc5f32639b5f1e6d9f6aeda3c" "1d2f406a342499f0098f9388b87d05ec9b28ccb12ca548f4f5fa80ae368235b6" default)))
+    ("a2cde79e4cc8dc9a03e7d9a42fabf8928720d420034b66aecc5b665bbf05d4e9" "3a2803566972e3f3882af48ce5680b824e81bf9dc5f32639b5f1e6d9f6aeda3c" "1d2f406a342499f0098f9388b87d05ec9b28ccb12ca548f4f5fa80ae368235b6" default)))
  '(package-selected-packages
    (quote
-    (org-download company org-drill-table markdownfmt markdown-mode+ orgalist org-mind-map markdown-mode highlight-indentation org plantuml-mode monokai-pro-theme org-plus-contrib emmet-mode smex web-mode company-c-headers company-go company-shell company-php htmlize)))
+    (org2jekyll monokai-theme org-download company org-drill-table markdownfmt markdown-mode+ orgalist org-mind-map markdown-mode highlight-indentation org plantuml-mode monokai-pro-theme org-plus-contrib emmet-mode smex web-mode company-c-headers company-go company-shell company-php htmlize)))
  '(plantuml-jar-path "~/.emacs.d/plantuml/plantuml.jar"))
 (custom-set-faces
  ;; custom-set-faces was added by Custom.
@@ -107,5 +134,4 @@
  ;; Your init file should contain only one such instance.
  ;; If there is more than one, they won't work right.
  )
-;; auto complete
-(global-company-mode t)
+
