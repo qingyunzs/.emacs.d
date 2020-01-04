@@ -24,6 +24,12 @@
 	 :section-numbers nil
 	 ;;:html_head "<link rel=\"stylesheet\" type=\"text/css\" href=\"../assets/themes/havee/css/style.css\" />"
 	 :body-only t)
+	("markdown-jekyll-zhaorengui"
+	 :base-directory "~/zhaorengui.github.io/_orgs/_posts/"
+	 :base-extension "md"
+	 :publishing-directory "~/zhaorengui.github.io/_posts/"
+	 :recursive t
+	 :publishing-function org-publish-attachment)
 	("org-static-images-zhaorengui"
 	 :base-directory "~/zhaorengui.github.io/_orgs/_assets/"
 	 :base-extension "png\\|jpg\\|jpeg\\|gif"
@@ -50,6 +56,7 @@
 	 :publishing-function org-publish-attachment)
 	("jekyll-zhaorengui-github-io"
 	 :components ("org-jekyll-zhaorengui"
+		      "markdown-jekyll-zhaorengui"
 		      "org-static-images-zhaorengui"
 		      "org-static-js-zhaorengui"
 		      "org-static-css-zhaorengui"
