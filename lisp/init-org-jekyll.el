@@ -105,7 +105,7 @@ tags:
 #+END_EXPORT
 
 # (setq org-export-html-use-infojs nil)
-感谢您阅读此文，如果您发现任何错误或误导之处，你可以发邮件至 zrg1390556486@gmail.com，编者将非常感谢您的纠正！
+If you have any questions abount this article, or if you have found any errors in this article, email me, please. This is my email address: zrg1390556486@gmail.com
 # (setq org-export-html-style nil)"
 
 "Default template for Jekyll posts. %s will be replace by the post title.")
