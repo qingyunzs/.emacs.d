@@ -81,7 +81,7 @@
 (tool-bar-mode -1)
 ;;
 ;; Set font
-(set-default-font "Monaco-16")
+(set-default-font "Monaco-15")
 ;;
 ;; Close scroll bar
 (scroll-all-mode t)
