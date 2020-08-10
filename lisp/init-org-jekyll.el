@@ -76,7 +76,7 @@
 #+AUTHOR:    zrg
 #+EMAIL:     zrg1390556487@gmail.com
 #+LANGUAGE:  cn
-#+OPTIONS:   H:3 num:t toc:nil \\n:nil @:t ::t |:t ^:nil -:t f:t *:t <:t
+#+OPTIONS:   H:6 num:t toc:nil \\n:nil @:t ::t |:t ^:nil -:t f:t *:t <:t
 #+OPTIONS:   TeX:t LaTeX:t skip:nil d:nil todo:t pri:nil tags:not-in-toc
 #+INFOJS_OPT: view:plain toc:t ltoc:t mouse:underline buttons:0 path:http://cs3.swfc.edu.cn/~20121156044/.org-info.js />
 #+HTML_HEAD: <link rel=\"stylesheet\" type=\"text/css\" href=\"http://cs3.swfu.edu.cn/~20121156044/.org-manual.css\" />
@@ -92,9 +92,9 @@
 #+BEGIN_EXPORT HTML
 ---
 layout: post
-title:  
+title: This is a title 
 author: zrg
-description:   
+description: This is description about the title
 excerpt: 
 comments: false
 categories: 
@@ -105,7 +105,7 @@ tags:
 #+END_EXPORT
 
 # (setq org-export-html-use-infojs nil)
-If you have any questions abount this article, or if you have found any errors in this article, email me, please. This is my email address: zrg1390556486@gmail.com
+My email address: zrg1390556486@gmail.com
 # (setq org-export-html-style nil)"
 
 "Default template for Jekyll posts. %s will be replace by the post title.")
@@ -114,7 +114,7 @@ If you have any questions abount this article, or if you have found any errors i
   (replace-regexp-in-string
     " " "-" (downcase
 	      (replace-regexp-in-string
-		"[^A-Za-z0-9\u4e00-\u9fa5]" "" s))))
+		"[^A-Za-z0-9\u4e00-\u9fa5\-]" "" s))))
 (defun jekyll-yaml-escape (s)
   "Escape a string for YAML."
   (if (or (string-match ":" s)
