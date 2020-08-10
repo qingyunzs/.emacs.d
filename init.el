@@ -65,8 +65,15 @@
 ;; Customize settings 	;;
 ;;			;;
 ;;;;;;;;;;;;;;;;;;;;;;;;;;
+;; Set welcome title
+;;(setq frame-title-format "Welcome to Emacs world! ")
 ;; Show line number
-;;(global-linum-mode t);
+;;(glolinum-mode t);
+;; or
+;;(line-number-mode t)
+;;
+;; Show column number
+;;(column-number-mode t)
 ;;
 ;; Set line format
 ;;(setq linum-format "%d ")
@@ -76,6 +83,9 @@
 ;;
 ;; Auto complete
 (global-company-mode t)
+;;
+;; Disable/enable menu bar
+;;(menu-bar-mode nil)
 ;;
 ;; Close tool bar
 (tool-bar-mode -1)
@@ -88,6 +98,16 @@
 ;;
 ;; Close start page
 (setq inhibit-splash-screen t)
+;;
+;; Open and Show image
+;;(setq auto-image-file-mode t)
+;;
+;; Show time
+(display-time-mode t)
+;;
+;; 24h
+(setq display-time-24hr-format t)
+;;
 ;;
 ;; Emmet optional settings
 ;; You probably want to add it to auto-load on your sgml modes:
@@ -119,7 +139,7 @@
  '(ansi-color-names-vector
    ["#2d2a2e" "#ff6188" "#a9dc76" "#ffd866" "#78dce8" "#ab9df2" "#ff6188" "#fcfcfa"])
  '(ansi-term-color-vector
-   [unspecified "#2d2a2e" "#ff6188" "#a9dc76" "#ffd866" "#78dce8" "#ab9df2" "#ff6188" "#fcfcfa"])
+   [unspecified "#2d2a2e" "#ff6188" "#a9dc76" "#ffd866" "#78dce8" "#ab9df2" "#ff6188" "#fcfcfa"] t)
  '(custom-enabled-themes (quote (monokai)))
  '(custom-safe-themes
    (quote
