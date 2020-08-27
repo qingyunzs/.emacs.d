@@ -18,6 +18,17 @@
 	      '(("melpa" . "http://melpa.org/packages/")
 		("gnu" . "http://elpa.gnu.org/packages/")
 		("org" . "http://orgmode.org/elpa/"))))
+;; 16.2 Structure Templates
+;; With just a few keystrokes, it is possible to insert empty structural blocks, such as ‘#+BEGIN_SRC’ … ‘#+END_SRC’, or to wrap existing text in such a block.
+;; 
+;; C-c C-, (org-insert-structure-template)
+;; Prompt for a type of block structure, and insert the block at point. If the region is active, it is wrapped in the block. First prompts the user for keys, which are used to look up a structure type from the variable below. If the key is TAB, RET, or SPC, the user is prompted to enter a block type.
+;; 
+;; Available structure types are defined in org-structure-template-alist, see the docstring for adding or changing values.
+;; 
+;; Org Tempo expands snippets to structures defined in org-structure-template-alist and org-tempo-keywords-alist. For example, < s TAB creates a code block. Enable it by customizing org-modules or add ‘(require 'org-tempo)’ to your Emacs init file146.
+;; https://orgmode.org/manual/Structure-Templates.html 
+(require 'org-tempo)
 ;;
 ;; Load language
 (package-initialize)
@@ -91,7 +102,7 @@
 (tool-bar-mode -1)
 ;;
 ;; Set font
-(set-default-font "Monaco-15")
+;;(set-default-font "Monaco-15")
 ;;
 ;; Close scroll bar
 (scroll-all-mode t)
@@ -140,13 +151,11 @@
    ["#2d2a2e" "#ff6188" "#a9dc76" "#ffd866" "#78dce8" "#ab9df2" "#ff6188" "#fcfcfa"])
  '(ansi-term-color-vector
    [unspecified "#2d2a2e" "#ff6188" "#a9dc76" "#ffd866" "#78dce8" "#ab9df2" "#ff6188" "#fcfcfa"] t)
- '(custom-enabled-themes (quote (monokai)))
+ '(custom-enabled-themes '(monokai))
  '(custom-safe-themes
-   (quote
-    ("a2cde79e4cc8dc9a03e7d9a42fabf8928720d420034b66aecc5b665bbf05d4e9" "3a2803566972e3f3882af48ce5680b824e81bf9dc5f32639b5f1e6d9f6aeda3c" "1d2f406a342499f0098f9388b87d05ec9b28ccb12ca548f4f5fa80ae368235b6" default)))
+   '("a2cde79e4cc8dc9a03e7d9a42fabf8928720d420034b66aecc5b665bbf05d4e9" "3a2803566972e3f3882af48ce5680b824e81bf9dc5f32639b5f1e6d9f6aeda3c" "1d2f406a342499f0098f9388b87d05ec9b28ccb12ca548f4f5fa80ae368235b6" default))
  '(package-selected-packages
-   (quote
-    (org2jekyll monokai-theme org-download company org-drill-table markdownfmt markdown-mode+ orgalist org-mind-map markdown-mode highlight-indentation org plantuml-mode monokai-pro-theme org-plus-contrib emmet-mode smex web-mode company-c-headers company-go company-shell company-php htmlize)))
+   '(org org2jekyll monokai-theme org-download company markdownfmt markdown-mode+ orgalist markdown-mode highlight-indentation plantuml-mode monokai-pro-theme org-plus-contrib emmet-mode smex web-mode company-c-headers company-go company-shell company-php htmlize))
  '(plantuml-jar-path "~/.emacs.d/plantuml/plantuml.jar"))
 (custom-set-faces
  ;; custom-set-faces was added by Custom.
