@@ -1,4 +1,4 @@
-;;init.el --- init
+;;init.el --- init
 ;;; Commentary:
 ;; Calls my Emacs configuration files after installing use-package, which is
 ;; necessary for operation.  See also:
