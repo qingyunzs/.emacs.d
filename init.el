@@ -10,14 +10,18 @@
 ;;      https://github.com/jwiegley/use-package
 
 ;;; Code:
-;;(setq debug-on-error t)
 (require 'package)
+(setq debug-on-error t)
 (setq package-enable-at-startup nil)
 (setq package-archives
-      (append package-archives
-	      '(("melpa" . "http://melpa.org/packages/")
+     (append package-archives
+	      '(
+		("melpa" . "http://melpa.org/packages/")
 		("gnu" . "http://elpa.gnu.org/packages/")
-		("org" . "http://orgmode.org/elpa/"))))
+		("org" . "http://orgmode.org/elpa/")
+		)
+	)
+)
 ;; 16.2 Structure Templates
 ;; With just a few keystrokes, it is possible to insert empty structural blocks, such as ‘#+BEGIN_SRC’ … ‘#+END_SRC’, or to wrap existing text in such a block.
 ;; 
@@ -30,8 +34,8 @@
 ;; https://orgmode.org/manual/Structure-Templates.html 
 (require 'org-tempo)
 ;;
-;; Load language
-(package-initialize)
+;; Initialize & Install Package
+(package-initialize) 
 ;;
 ;; Load languages
 (org-babel-do-load-languages
@@ -105,7 +109,7 @@
 (tool-bar-mode -1)
 ;;
 ;; Set font
-;;(set-default-font "Monaco-15")
+;;(set-default-font "Monaco 15")
 ;;
 ;; Close scroll bar
 (scroll-all-mode t)
