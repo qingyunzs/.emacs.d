@@ -7,61 +7,61 @@
 ;; (setq org-export-with-sub-superscripts nil)
 (setq org-publish-project-alist
       '(
-	("org-jekyll-qingyunzs" 
-	 ;; Path to org files.
-	 :base-directory "~/qingyunzs.github.io/_orgs/"
-	 :base-extension "org"
-	 ;; Path to Jekyll Posts
-	 :publishing-directory "~/qingyunzs.github.io/"
-	 :recursive t
-	 :publishing-function org-html-publish-to-html
-	 :with-toc nil
-	 :headline-levels 4
-	 :auto-preamble nil
-	 :auto-sitemap nil
-	 :table-of-contents nil
-	 :html-extension "html"
-	 :section-numbers nil
-	 ;;:html_head "<link rel=\"stylesheet\" type=\"text/css\" href=\"../assets/themes/havee/css/style.css\" />"
-	 :body-only t)
-	("markdown-jekyll-qingyunzs"
-	 :base-directory "~/qingyunzs.github.io/_orgs/_posts/"
-	 :base-extension "md"
-	 :publishing-directory "~/qingyunzs.github.io/_posts/"
-	 :recursive t
-	 :publishing-function org-publish-attachment)
-	("org-static-images-qingyunzs"
-	 :base-directory "~/qingyunzs.github.io/_orgs/_assets/"
-	 :base-extension "png\\|jpg\\|jpeg\\|gif"
-	 :publishing-directory "~/qingyunzs.github.io/assets/images/"
-	 :recursive t
-	 :publishing-function org-publish-attachment)
-	("org-static-js-qingyunzs"
-	 :base-directory "~/qingyunzs.github.io/_orgs/_assets/"
-	 :base-extension "js"
-	 :publishing-directory "~/qingyunzs.github.io/assets/js/"
-	 :recursive t
-	 :publishing-function org-publish-attachment)
-	("org-static-css-qingyunzs"
-	 :base-directory "~/qingyunzs.github.io/_orgs/_assets/"
-	 :base-extension "css"
-	 :publishing-directory "~/qingyunzs.github.io/assets/css/"
-	 :recursive t
-	 :publishing-function org-publish-attachment)
-	("org-static-other-qingyunzs"
-	 :base-directory "~/qingyunzs.github.io/_orgs/_assets/"
-	 :base-extension "pdf\\|mp3\\|ogg\\|swf\\|php"
-	 :publishing-directory "~/qingyunzs.github.io/assets/other/"
-	 :recursive t
-	 :publishing-function org-publish-attachment)
-	("jekyll-qingyunzs-github-io"
-	 :components ("org-jekyll-qingyunzs"
-		      "markdown-jekyll-qingyunzs"
-		      "org-static-images-qingyunzs"
-		      "org-static-js-qingyunzs"
-		      "org-static-css-qingyunzs"
-		      "org-static-other-qingyunzs"))
-	)
+        ("org-jekyll-qingyunzs" 
+         ;; Path to org files.
+         :base-directory "~/qingyunzs.github.io/_orgs/"
+         :base-extension "org"
+         ;; Path to Jekyll Posts
+         :publishing-directory "~/qingyunzs.github.io/"
+         :recursive t
+         :publishing-function org-html-publish-to-html
+         :with-toc nil
+         :headline-levels 4
+         :auto-preamble nil
+         :auto-sitemap nil
+         :table-of-contents nil
+         :html-extension "html"
+         :section-numbers nil
+         ;;:html_head "<link rel=\"stylesheet\" type=\"text/css\" href=\"../assets/themes/havee/css/style.css\" />"
+         :body-only t)
+        ("markdown-jekyll-qingyunzs"
+         :base-directory "~/qingyunzs.github.io/_orgs/_posts/"
+         :base-extension "md"
+         :publishing-directory "~/qingyunzs.github.io/_posts/"
+         :recursive t
+         :publishing-function org-publish-attachment)
+        ("org-static-images-qingyunzs"
+         :base-directory "~/qingyunzs.github.io/_orgs/_assets/"
+         :base-extension "png\\|jpg\\|jpeg\\|gif"
+         :publishing-directory "~/qingyunzs.github.io/assets/images/"
+         :recursive t
+         :publishing-function org-publish-attachment)
+        ("org-static-js-qingyunzs"
+         :base-directory "~/qingyunzs.github.io/_orgs/_assets/"
+         :base-extension "js"
+         :publishing-directory "~/qingyunzs.github.io/assets/js/"
+         :recursive t
+         :publishing-function org-publish-attachment)
+        ("org-static-css-qingyunzs"
+         :base-directory "~/qingyunzs.github.io/_orgs/_assets/"
+         :base-extension "css"
+         :publishing-directory "~/qingyunzs.github.io/assets/css/"
+         :recursive t
+         :publishing-function org-publish-attachment)
+        ("org-static-other-qingyunzs"
+         :base-directory "~/qingyunzs.github.io/_orgs/_assets/"
+         :base-extension "pdf\\|mp3\\|ogg\\|swf\\|php"
+         :publishing-directory "~/qingyunzs.github.io/assets/other/"
+         :recursive t
+         :publishing-function org-publish-attachment)
+        ("jekyll-qingyunzs-github-io"
+         :components ("org-jekyll-qingyunzs"
+                      "markdown-jekyll-qingyunzs"
+                      "org-static-images-qingyunzs"
+                      "org-static-js-qingyunzs"
+                      "org-static-css-qingyunzs"
+                      "org-static-other-qingyunzs"))
+        )
       )
 (defvar jekyll-directory (expand-file-name "~/qingyunzs.github.io/_orgs/")
   "Path to Jekyll blog.")
@@ -73,52 +73,52 @@
   "File extension of Jekyll posts.")
 (defvar jekyll-post-template
   "#+TITLE:  %s 
-#+AUTHOR:    zrg
-#+EMAIL:     zrg1390556487@gmail.com
-#+LANGUAGE:  cn
-#+OPTIONS:   H:6 num:t toc:nil \\n:nil @:t ::t |:t ^:nil -:t f:t *:t <:t
-#+OPTIONS:   TeX:t LaTeX:t skip:nil d:nil todo:t pri:nil tags:not-in-toc
-#+INFOJS_OPT: view:plain toc:t ltoc:t mouse:underline buttons:0 path:http://cs3.swfc.edu.cn/~20121156044/.org-info.js />
-#+HTML_HEAD: <link rel=\"stylesheet\" type=\"text/css\" href=\"http://cs3.swfu.edu.cn/~20121156044/.org-manual.css\" />
-#+EXPORT_SELECT_TAGS: export
-#+HTML_HEAD_EXTRA: <style>body {font-size:14pt} code {font-weight:bold;font-size:12px; color:darkblue}</style>
-#+EXPORT_EXCLUDE_TAGS: noexport
-#+LINK_UP:   
-#+LINK_HOME: 
-#+XSLT: 
+  #+AUTHOR:    zrg
+  #+EMAIL:     zrg1390556487@gmail.com
+  #+LANGUAGE:  cn
+  #+OPTIONS:   H:6 num:t toc:nil \\n:nil @:t ::t |:t ^:nil -:t f:t *:t <:t
+  #+OPTIONS:   TeX:t LaTeX:t skip:nil d:nil todo:t pri:nil tags:not-in-toc
+  #+INFOJS_OPT: view:plain toc:t ltoc:t mouse:underline buttons:0 path:http://cs3.swfc.edu.cn/~20121156044/.org-info.js />
+  #+HTML_HEAD: <link rel=\"stylesheet\" type=\"text/css\" href=\"http://cs3.swfu.edu.cn/~20121156044/.org-manual.css\" />
+  #+EXPORT_SELECT_TAGS: export
+  #+HTML_HEAD_EXTRA: <style>body {font-size:14pt} code {font-weight:bold;font-size:12px; color:darkblue}</style>
+  #+EXPORT_EXCLUDE_TAGS: noexport
+  #+LINK_UP:   
+  #+LINK_HOME: 
+  #+XSLT: 
 
-#+STARTUP: showall indent
-#+STARTUP: hidestars
-#+BEGIN_EXPORT HTML
----
-layout: post
-title: This is a title 
-author: zrg
-description: This is description about the title
-excerpt: 
-comments: false
-categories: 
-- algorithms
-tags:
-- ACM
----
-#+END_EXPORT
+  #+STARTUP: showall indent
+  #+STARTUP: hidestars
+  #+BEGIN_EXPORT HTML
+  ---
+  layout: post
+  title: This is a title 
+  author: zrg
+  description: This is description about the title
+  excerpt: 
+  comments: false
+  categories: 
+  - algorithms
+  tags:
+  - ACM
+  ---
+  #+END_EXPORT
 
-# (setq org-export-html-use-infojs nil)
-My email address: zrg1390556486@gmail.com
-# (setq org-export-html-style nil)"
+  # (setq org-export-html-use-infojs nil)
+  My email address: zrg1390556486@gmail.com
+  # (setq org-export-html-style nil)"
 
-"Default template for Jekyll posts. %s will be replace by the post title.")
+  "Default template for Jekyll posts. %s will be replace by the post title.")
 (defun jekyll-make-slug (s)
   "Turn a string into a slug."
   (replace-regexp-in-string
     " " "-" (downcase
-	      (replace-regexp-in-string
-		"[^A-Za-z0-9\u4e00-\u9fa5\-]" "" s))))
+              (replace-regexp-in-string
+                "[^A-Za-z0-9\u4e00-\u9fa5\-]" "" s))))
 (defun jekyll-yaml-escape (s)
   "Escape a string for YAML."
   (if (or (string-match ":" s)
-	  (string-match "\"" s))
+          (string-match "\"" s))
     (concat "\"" (replace-regexp-in-string "\"" "\\\\\"" s) "\"")
     s))
 
@@ -126,8 +126,8 @@ My email address: zrg1390556486@gmail.com
   "Create a new Jekyll blog post."
   (interactive "sPost Title: ")
   (let ((draft-file (concat jekyll-directory jekyll-drafts-dir
-			    (jekyll-make-slug title)
-			    jekyll-post-ext)))
+                            (jekyll-make-slug title)
+                            jekyll-post-ext)))
     (if (file-exists-p draft-file)
       (find-file draft-file)
       (find-file draft-file)
@@ -139,22 +139,22 @@ My email address: zrg1390556486@gmail.com
   (interactive)
   (cond
     ((not (equal
-	    (file-name-directory (buffer-file-name (current-buffer)))
-	    (concat jekyll-directory jekyll-drafts-dir)))
+            (file-name-directory (buffer-file-name (current-buffer)))
+            (concat jekyll-directory jekyll-drafts-dir)))
      (message "This is not a draft post."))
     ((buffer-modified-p)
      (message "Can't publish post; buffer has modifications."))
     (t
       (let ((filename
-	      (concat jekyll-directory jekyll-posts-dir
-		      (format-time-string "%Y-%m-%d-")
-		      (file-name-nondirectory
-			(buffer-file-name (current-buffer)))))
-	    (old-point (point)))
-	(rename-file (buffer-file-name (current-buffer))
-		     filename)
-	(kill-buffer nil)
-	(find-file filename)
-	(set-window-point (selected-window) old-point)))))
+              (concat jekyll-directory jekyll-posts-dir
+                      (format-time-string "%Y-%m-%d-")
+                      (file-name-nondirectory
+                        (buffer-file-name (current-buffer)))))
+            (old-point (point)))
+        (rename-file (buffer-file-name (current-buffer))
+                     filename)
+        (kill-buffer nil)
+        (find-file filename)
+        (set-window-point (selected-window) old-point)))))
 ;; provide
 (provide 'init-org-jekyll)
