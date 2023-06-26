@@ -38,6 +38,7 @@
 (package-initialize) 
 ;;
 ;; Load languages
+;; https://orgmode.org/manual/Languages.html#Languages
 (org-babel-do-load-languages
   'org-babel-load-languages
   '( (C . t)
@@ -161,7 +162,7 @@
  '(custom-safe-themes
    '("a2cde79e4cc8dc9a03e7d9a42fabf8928720d420034b66aecc5b665bbf05d4e9" "3a2803566972e3f3882af48ce5680b824e81bf9dc5f32639b5f1e6d9f6aeda3c" "1d2f406a342499f0098f9388b87d05ec9b28ccb12ca548f4f5fa80ae368235b6" default))
  '(package-selected-packages
-   '(grip-mode multiple-cursors cl-libify org org2jekyll monokai-theme org-download company markdownfmt markdown-mode+ orgalist markdown-mode highlight-indentation plantuml-mode monokai-pro-theme org-plus-contrib emmet-mode smex web-mode company-c-headers company-go company-shell company-php htmlize))
+   '(xmind-org company-tabnine grip-mode multiple-cursors cl-libify org org2jekyll monokai-theme org-download company markdownfmt markdown-mode+ orgalist markdown-mode highlight-indentation plantuml-mode monokai-pro-theme org-plus-contrib emmet-mode smex web-mode company-c-headers company-go company-shell company-php htmlize))
  '(plantuml-jar-path "~/.emacs.d/plantuml/plantuml.jar"))
 (custom-set-faces
  ;; custom-set-faces was added by Custom.
@@ -170,3 +171,4 @@
  ;; If there is more than one, they won't work right.
  )
 
+(put 'upcase-region 'disabled nil)

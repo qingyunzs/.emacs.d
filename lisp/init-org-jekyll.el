@@ -1,18 +1,18 @@
 ;; File Description: Using org to Blog with Jekyll
 ;; From: https://segmentfault.com/a/1190000008313904
-;; @Author: Little Sentry
+;; @Author: Zhao Rengui
 ;; @Date: 201808
 (setq org-confirm-babel-evaluate nil)
 (setq org-src-fontify-natively t)
 ;; (setq org-export-with-sub-superscripts nil)
 (setq org-publish-project-alist
       '(
-	("org-jekyll-qingyunzs" 
+	("org-jekyll-zhaorengui" 
 	 ;; Path to org files.
-	 :base-directory "~/qingyunzs.github.io/_orgs/"
+	 :base-directory "~/zhaorengui.github.io/_orgs/"
 	 :base-extension "org"
 	 ;; Path to Jekyll Posts
-	 :publishing-directory "~/qingyunzs.github.io/"
+	 :publishing-directory "~/zhaorengui.github.io/"
 	 :recursive t
 	 :publishing-function org-html-publish-to-html
 	 :with-toc nil
@@ -24,46 +24,46 @@
 	 :section-numbers nil
 	 ;;:html_head "<link rel=\"stylesheet\" type=\"text/css\" href=\"../assets/themes/havee/css/style.css\" />"
 	 :body-only t)
-	("markdown-jekyll-qingyunzs"
-	 :base-directory "~/qingyunzs.github.io/_orgs/_posts/"
+	("markdown-jekyll-zhaorengui"
+	 :base-directory "~/zhaorengui.github.io/_orgs/_posts/"
 	 :base-extension "md"
-	 :publishing-directory "~/qingyunzs.github.io/_posts/"
+	 :publishing-directory "~/zhaorengui.github.io/_posts/"
 	 :recursive t
 	 :publishing-function org-publish-attachment)
-	("org-static-images-qingyunzs"
-	 :base-directory "~/qingyunzs.github.io/_orgs/_assets/"
+	("org-static-images-zhaorengui"
+	 :base-directory "~/zhaorengui.github.io/_orgs/_assets/"
 	 :base-extension "png\\|jpg\\|jpeg\\|gif"
-	 :publishing-directory "~/qingyunzs.github.io/assets/images/"
+	 :publishing-directory "~/zhaorengui.github.io/assets/images/"
 	 :recursive t
 	 :publishing-function org-publish-attachment)
-	("org-static-js-qingyunzs"
-	 :base-directory "~/qingyunzs.github.io/_orgs/_assets/"
+	("org-static-js-zhaorengui"
+	 :base-directory "~/zhaorengui.github.io/_orgs/_assets/"
 	 :base-extension "js"
-	 :publishing-directory "~/qingyunzs.github.io/assets/js/"
+	 :publishing-directory "~/zhaorengui.github.io/assets/js/"
 	 :recursive t
 	 :publishing-function org-publish-attachment)
-	("org-static-css-qingyunzs"
-	 :base-directory "~/qingyunzs.github.io/_orgs/_assets/"
+	("org-static-css-zhaorengui"
+	 :base-directory "~/zhaorengui.github.io/_orgs/_assets/"
 	 :base-extension "css"
-	 :publishing-directory "~/qingyunzs.github.io/assets/css/"
+	 :publishing-directory "~/zhaorengui.github.io/assets/css/"
 	 :recursive t
 	 :publishing-function org-publish-attachment)
-	("org-static-other-qingyunzs"
-	 :base-directory "~/qingyunzs.github.io/_orgs/_assets/"
+	("org-static-other-zhaorengui"
+	 :base-directory "~/zhaorengui.github.io/_orgs/_assets/"
 	 :base-extension "pdf\\|mp3\\|ogg\\|swf\\|php"
-	 :publishing-directory "~/qingyunzs.github.io/assets/other/"
+	 :publishing-directory "~/zhaorengui.github.io/assets/other/"
 	 :recursive t
 	 :publishing-function org-publish-attachment)
-	("jekyll-qingyunzs-github-io"
-	 :components ("org-jekyll-qingyunzs"
-		      "markdown-jekyll-qingyunzs"
-		      "org-static-images-qingyunzs"
-		      "org-static-js-qingyunzs"
-		      "org-static-css-qingyunzs"
-		      "org-static-other-qingyunzs"))
+	("jekyll-zhaorengui-github-io"
+	 :components ("org-jekyll-zhaorengui"
+		      "markdown-jekyll-zhaorengui"
+		      "org-static-images-zhaorengui"
+		      "org-static-js-zhaorengui"
+		      "org-static-css-zhaorengui"
+		      "org-static-other-zhaorengui"))
 	)
       )
-(defvar jekyll-directory (expand-file-name "~/qingyunzs.github.io/_orgs/")
+(defvar jekyll-directory (expand-file-name "~/zhaorengui.github.io/_orgs/")
   "Path to Jekyll blog.")
 (defvar jekyll-drafts-dir "_drafts/"
   "Relative path to drafts directory.")
