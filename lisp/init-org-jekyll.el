@@ -114,7 +114,7 @@
   (replace-regexp-in-string
     " " "-" (downcase
               (replace-regexp-in-string
-                "[^A-Za-z0-9\u4e00-\u9fa5\-]" "" s))))
+                "[^A-Za-z0-9\u4e00-\u9fa5\-]" "-" s))))
 (defun jekyll-yaml-escape (s)
   "Escape a string for YAML."
   (if (or (string-match ":" s)
