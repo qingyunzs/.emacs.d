@@ -16,13 +16,15 @@
          :recursive t
          :publishing-function org-html-publish-to-html
          :with-toc nil
-         :headline-levels 4
+         :headline-levels 6
          :auto-preamble nil
          :auto-sitemap nil
          :table-of-contents nil
-         :html-extension "html"
          :section-numbers nil
-         ;;:html_head "<link rel=\"stylesheet\" type=\"text/css\" href=\"../assets/themes/havee/css/style.css\" />"
+         :html-use-infojs t
+         :html-infojs-options "path:https://qingyunzs.github.io/assets/js/org-info.js"
+         :html-head "<link rel=\"stylesheet\" type=\"text/css\" href=\"https://qingyunzs.github.io/assets/css/org-manual.css\" />"
+         :html-extension "html"
          :body-only t)
         ("markdown-jekyll-qingyunzs"
          :base-directory "~/qingyunzs.github.io/_orgs/_posts/"
@@ -78,8 +80,8 @@
   #+LANGUAGE:  cn
   #+OPTIONS:   H:6 num:t toc:nil \\n:nil @:t ::t |:t ^:nil -:t f:t *:t <:t
   #+OPTIONS:   TeX:t LaTeX:t skip:nil d:nil todo:t pri:nil tags:not-in-toc
-  #+INFOJS_OPT: view:plain toc:t ltoc:t mouse:underline buttons:0 path:http://cs3.swfc.edu.cn/~20121156044/.org-info.js />
-  #+HTML_HEAD: <link rel=\"stylesheet\" type=\"text/css\" href=\"http://cs3.swfu.edu.cn/~20121156044/.org-manual.css\" />
+  #+INFOJS_OPT: view:plain toc:t ltoc:t mouse:underline buttons:0 path:/assets/js/org-info.js
+  #+HTML_HEAD: <link rel=\"stylesheet\" type=\"text/css\" href=\"/assets/css/org-manual.css\" />
   #+EXPORT_SELECT_TAGS: export
   #+HTML_HEAD_EXTRA: <style>body {font-size:14pt} code {font-weight:bold;font-size:12px; color:darkblue}</style>
   #+EXPORT_EXCLUDE_TAGS: noexport
@@ -131,6 +133,18 @@
     (if (file-exists-p draft-file)
       (find-file draft-file)
       (find-file draft-file)
+      (insert (format jekyll-post-template (jekyll-yaml-escape title))))))
+
+(defun jekyll-new-post (title)
+  "Create a new Jekyll blog post directly in _posts directory with current date."
+  (interactive "sPost Title: ")
+  (let ((post-file (concat jekyll-directory jekyll-posts-dir
+                          (format-time-string "%Y-%m-%d-")
+                          (jekyll-make-slug title)
+                          jekyll-post-ext)))
+    (if (file-exists-p post-file)
+        (find-file post-file)
+      (find-file post-file)
       (insert (format jekyll-post-template (jekyll-yaml-escape title))))))
 
 (defun jekyll-publish-post ()

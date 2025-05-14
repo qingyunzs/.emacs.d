@@ -76,9 +76,18 @@
 ;; Load org-preview-html.el
 (require 'org-preview-html)
 ;;
+;; Load pasteex-mode.el
+(require 'pasteex-mode)
+;;
 ;; Load plantuml
 (setq org-plantuml-jar-path
       (expand-file-name "~/.emacs.d/plantuml/plantuml.jar"))
+;;
+;; Set pasteex path
+(setq pasteex-executable-path "/tmp/pasteex")
+(setq pasteex-image-dir "../_assets/")
+;;
+(setq byte-compile-warnings '(cl-functions))
 ;;;;;;;;;;;;;;;;;;;;;;;;;;
 ;;			;;
 ;; Customize settings 	;;
@@ -89,7 +98,7 @@
 ;; Show line number
 ;;(glolinum-mode t);
 ;; or
-;;(line-number-mode t)
+(line-number-mode t)
 ;;
 ;; Show column number
 ;;(column-number-mode t)
@@ -126,6 +135,10 @@
 ;;
 ;; 24h
 (setq display-time-24hr-format t)
+;;
+;; Bind key to function pasteex-image
+;;
+(global-set-key (kbd "C-x p i") 'pasteex-image)
 ;;
 ;; Emmet optional settings
 ;; You probably want to add it to auto-load on your sgml modes:
